@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-  background: #2f2f2f; /* Deep grey background for better contrast */
+  background: #2f2f2f; 
   color: #eeeeee;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
@@ -17,7 +17,7 @@ body {
 header {
   text-align: center;
   padding: 40px 20px;
-  background: linear-gradient(135deg, #4b0082, #6a5acd); /* Gradient background */
+  background: linear-gradient(135deg, #4b0082, #6a5acd);
   color: #fff;
   
 }
@@ -31,7 +31,7 @@ header img {
 }
 
 header img:hover {
-  transform: scale(1.1); /* Subtle hover effect for logo */
+  transform: scale(1.1);
 }
 
 header h1 {
@@ -197,7 +197,7 @@ a:hover {
   }
 
   .feature-image {
-    height: auto; /* Adjust height for smaller screens */
+    height: auto; 
   }
 
   section h2 {
