@@ -1,59 +1,206 @@
+/* General Styles */
 body {
-  background: rgb(47, 47, 47);
-}
-
-h1 {
-  font-size: 24px;
-  margin: 10px 0 0 0;
-  font-weight: normal;
+  background: #2f2f2f; 
   color: #eeeeee;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
 }
 
-a:link {
-  color: lightskyblue;
-  background-color: transparent;
+/* Global Spacing */
+* {
+  box-sizing: border-box;
+}
+
+/* Hero Section */
+header {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #4b0082, #6a5acd);
+  color: #fff;
+  
+}
+
+header img {
+  display: block;
+  margin: 0 auto 20px auto;
+  width: 120px;
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+header img:hover {
+  transform: scale(1.1);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin: 10px 0;
+  font-weight: 600;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+  margin: 10px auto;
+  max-width: 600px;
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #6a5acd;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
   text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.cta-button:hover {
+  background: #836fff;
+  transform: translateY(-3px);
+}
+
+/* Features Section */
+main {
+  padding: 40px 20px;
+}
+
+section {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+section h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px 0;
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  gap: 20px;
+}
+
+.feature:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.feature-image {
+  flex: 1;
+  max-width: 45%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.feature-text {
+  flex: 1;
+  max-width: 45%;
+  color: #eee;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.feature-text h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #ffda79; /* Highlighted heading */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Scroll Animation */
+.scroll-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Footer Section */
+footer {
+  background: #1e1e1e;
+  padding: 20px 0;
+  text-align: center;
+  color: #ddd;
+  font-size: 0.9rem;
+  border-top: 5px solid #4b0082;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Buttons and Links */
+a {
+  color: #4bb4d4;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
 }
 
 a:visited {
-  color: #6d4b8d;
+  color: #9c88ff;
 }
 
-a:active {
+a:hover {
+  color: #e1dffc;
   text-decoration: underline;
-  font-weight: normal;
 }
 
-p {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: #eeeeee;
-  font-weight: normal;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
 
-img {
-  border-radius: 1%;
-  max-width: 800px;
-  max-height: 800px;
-}
+  header p {
+    font-size: 1rem;
+  }
 
-.screenshot {
-  height: auto;
-  width: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
+  .feature {
+    flex-direction: column;
+    gap: 15px;
+  }
 
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  /* width: 50%; */
-}
+  .feature-image,
+  .feature-text {
+    max-width: 100%;
+  }
 
-.image-txt-container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  .feature-image {
+    height: auto; 
+  }
+
+  section h2 {
+    font-size: 1.6rem;
+  }
 }
