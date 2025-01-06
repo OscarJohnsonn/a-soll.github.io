@@ -19,7 +19,6 @@ header {
   padding: 40px 20px;
   background: linear-gradient(135deg, #4b0082, #6a5acd);
   color: #fff;
-  
 }
 
 header img {
@@ -139,12 +138,14 @@ section h2 {
     opacity: 1;
   }
 }
+
 .download-container {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 2rem 0;
 }
+
 /* Scroll Animation */
 .scroll-in {
   opacity: 1;
@@ -181,6 +182,7 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Media Queries */
 @media (max-width: 768px) {
   .feature {
     flex-direction: column !important; /* Override nth-child(even) */

@@ -1,2 +1,1 @@
-# Project Title
-    kulve.org
+Official website of Kuvle, an upcoming macOS native Twitch client
